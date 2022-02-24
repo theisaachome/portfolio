@@ -1,0 +1,23 @@
+// Media Queries
+$breakpoints: (
+    small: 699px,
+    medium: 700px,
+    large: 1000px,
+    xlarge: 1300px
+);
+
+@mixin breakpoint($size){
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value){
+        @content;
+    }
+}
+
+@mixin breakpoint-less($size){
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (max-width: $breakpoint-value){
+        @content;
+    }
+}
