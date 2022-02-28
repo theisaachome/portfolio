@@ -11,11 +11,15 @@ import PortfolioPage from "./pages/PortfolioPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import Home from "./pages";
+import SigninPage from "./pages/Signin";
 
 function App() {
   return (
     <Router>
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route  path="/signin" element={<SigninPage/>}/>
+      </Routes>
     </Router>
   );
 }
