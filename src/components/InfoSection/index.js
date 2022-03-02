@@ -16,9 +16,20 @@ import {
 } from './InfoElements';
 
 const InfoSection = ({
-  lightBg, id, imgStart, topline, headline, lightText, description, buttonLabel, imgUrl, alt, dark, primary, darkText
+  lightBg, 
+  id, 
+  imgStart, 
+  topline, 
+  headline, 
+  lightText, 
+  description, 
+  buttonLabel, 
+  imgUrl, 
+  alt, 
+  dark, 
+  primary, 
+  darkText
 }) => {
-  console.log(imgUrl);
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -35,7 +46,7 @@ const InfoSection = ({
                    smooth={true}
                    duration={500}
                    spy={true}
-                   exact={true}
+                   exact="true"
                    offset={-80}
                    primary={primary? 1:0}
                    dark={dark?1:0}>{buttonLabel}</Button>
